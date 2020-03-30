@@ -137,6 +137,7 @@ chrome.storage.local.get('tab_modifier', function (items) {
                             title = updateTitle(title, '$' + i, matches[i]);
                         }
                     }
+                    title = decodeURIComponent(title);
                 } catch (e) {
                     console.log(e);
                 }
